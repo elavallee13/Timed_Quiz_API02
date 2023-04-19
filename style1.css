@@ -1,0 +1,113 @@
+.container {
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+    
+    .header {
+    background-color: white;
+    color: orange;
+    padding: 1rem;
+    text-align: center;
+    flex: 0 0 auto;
+    }
+    
+    .header h1 {
+    margin: 0;
+    }
+    
+    .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    }
+    
+    .question-container {
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    }
+    
+    .choices-container {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .choice-btn {
+    background-color: #fff;
+    border: 2px solid #2c3e50;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .choice-btn:hover {
+    background-color: #be680b;
+    color: #fff;
+    }
+    
+    #next-btn {
+        background-color: white;
+        border: none;
+        color: #be680b;
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        text-align: center;
+        margin-top: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        }
+    
+    @media only screen and (max-width: 768px) {
+    .container {
+    padding: 1rem;
+    }
+    
+    .header h1 {
+    font-size: 1.5rem;
+    }
+    
+    .question-container {
+    padding: 1rem;
+    }
+    
+    .choice-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+    }
+    
+    #next-btn {
+    font-size: 1rem;
+    padding: 0.8rem 1.6rem;
+    }
+    }
+
+    #quiz-end-container  {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: #ff9800;
+        text-align: center;
+        margin-top: 40px;
+    }
+    #quiz-end-container button  {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 24px;
+        border-radius: 5px;
+        background-color: orange;
+        color: #fff;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        border: 1.5px solid #0e0f10;
+    }
