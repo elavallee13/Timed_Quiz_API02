@@ -11,7 +11,7 @@ In order to take this quiz, you should have a basic understanding of HTML, CSS, 
 This quiz is designed to be run in any modern web browser.
 
 Authors
-This quiz was created by [Eric Lavallee], a student at the UT Coding Bootcamp learn skills such as CSS, HTML, and JavaScript.
+This quiz was created by Eric Lavallee, a student at the UT Coding Bootcamp learn skills such as CSS, HTML, and JavaScript.
 
 Acknowledgments
 Thanks to the following resources, I was able to successfully complete this challenge:

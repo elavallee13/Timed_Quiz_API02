@@ -111,3 +111,8 @@
         transition: background-color 0.3s ease;
         border: 1.5px solid #0e0f10;
     }
+    .question-container #timer {
+        font-size: 40px;
+        font-weight: bold;
+        color: red;
+      }

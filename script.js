@@ -111,6 +111,36 @@ const choicesEl = document.querySelector(".choices-container");
 // const nextBtn = document.querySelector("#next-btn");
 const endQuizContainer = document.querySelector("#quiz-end-container");
 
+
+//Timer for quiz
+const startingMinutes = 1;
+let time = startingMinutes * 60;
+const countdownElement = document.getElementById('timer');
+
+// Update the timer every second
+const countdownTimer = setInterval(() => {
+const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  // Time remaining
+  countdownElement.innerHTML = `${minutes}:${seconds}`;
+
+  // Decrement the time by 1 second
+  time--;
+
+  // End the timer if time runs out
+  if (time < 0) {
+    clearInterval(countdownTimer);
+    countdownElement.innerHTML = 'Time is up!';
+    // Do something else when the timer ends (e.g. submit the quiz)
+  }
+}, 1000); // = 1 second
+
+
 function showQuestion() {
   const question = questions[currentQuestion];
   questionEl.textContent = question.question;
@@ -141,7 +171,6 @@ function endQuiz() {
     <button id="back-btn">Start Over</button>
   `);
   const restartBtn = document.querySelector("#restart-btn");
-  // Insert directiv of case - - - remove cherie
   
   const backBtn = document.querySelector("#back-btn");
   backBtn.addEventListener("click", function(){
@@ -152,14 +181,12 @@ function endQuiz() {
 showQuestion(); {
 }
 
-// quiz.js
 function showResults() {
-  // calculate the score and display it on the page
+
   const score = calculateScore();
   const scorePage = createScorePage(score);
   document.body.innerHTML = scorePage;
   
-  // add event listener to the restart button
   const restartBtn = document.getElementById('restart-btn');
   restartBtn.addEventListener('click', () => {
     window.location.reload();
@@ -167,8 +194,6 @@ function showResults() {
 }
 
 function calculateScore() {
-  // calculate the score based on the user's answers
-  // and return it
 }
 
 function createScorePage(score) {
